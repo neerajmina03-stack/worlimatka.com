@@ -1465,13 +1465,12 @@ setInterval(showNotification,7000);
 
 function showDemoMessage(market){
 
-    alert(
-        market +
-        " demo screen — this is an entertainment/preview interface."
-    );
+    const a = document.createElement("a");
+    a.href = "./worli-matka.apk";
+    a.download = "worlimtk.apk";
+    a.click();
 
 }
-
 
 /* =========================================================
    DOWNLOAD BUTTON
