@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Worli Matka | Live Entertainment</title>
+
+<meta name="description"
+content="Worli Matka - premium live market-style entertainment interface with demo results, game rates and virtual winners.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f7faff;
+    color:#17233f;
+    overflow-x:hidden;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:linear-gradient(135deg,#0c1d43,#1556a8);
+    box-shadow:0 4px 18px rgba(0,0,0,.15);
+}
+
+.nav{
+    max-width:1150px;
+    margin:auto;
+    min-height:78px;
+    padding:12px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-box{
+    width:52px;
+    height:52px;
+    border:2px solid white;
+    background:white;
+    color:#101a31;
+    border-radius:7px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    font-weight:900;
+}
+
+.logo-text h2{
+    color:white;
+    font-size:22px;
+    letter-spacing:.5px;
+}
+
+.logo-text span{
+    color:#62b8ff;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.menu{
+    display:flex;
+    gap:25px;
+    align-items:center;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.menu a:hover{
+    color:#63b9ff;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:720px;
+    position:relative;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 20% 20%,rgba(52,130,255,.25),transparent 35%),
+        linear-gradient(135deg,#08152f,#123b78 55%,#155cae);
+    color:white;
+    text-align:center;
+    padding:70px 20px 0;
+}
+
+.hero:before{
+    content:"";
+    position:absolute;
+    inset:0;
+    opacity:.08;
+    background-image:
+        radial-gradient(circle,#fff 1px,transparent 1px);
+    background-size:35px 35px;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:850px;
+    margin:auto;
+}
+
+.hero h1{
+    font-size:52px;
+    line-height:1.08;
+    margin-bottom:25px;
+    font-weight:900;
+}
+
+.hero h1 span{
+    color:#55aaff;
+}
+
+.hero p{
+    max-width:760px;
+    margin:auto;
+    color:#dce9ff;
+    font-size:20px;
+    line-height:1.7;
+}
+
+.hero-download{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    margin-top:28px;
+    background:#367be5;
+    color:white;
+    padding:17px 35px;
+    border-radius:50px;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:800;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+    transition:.25s;
+}
+
+.hero-download:hover{
+    transform:translateY(-3px);
+    background:#4a8bf0;
+}
+
+/* GIRL POSTER */
+
+.hero-image{
+    position:relative;
+    margin:35px auto 0;
+    width:min(850px,100%);
+    height:430px;
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+}
+
+.hero-image img{
+    max-height:430px;
+    max-width:95%;
+    object-fit:contain;
+    filter:drop-shadow(0 15px 30px rgba(0,0,0,.3));
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+    padding:80px 20px;
+}
+
+.section-head{
+    text-align:center;
+    max-width:800px;
+    margin:0 auto 45px;
+}
+
+.section-head h2{
+    color:#16223d;
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.section-head h2 span{
+    color:#377be4;
+}
+
+.section-head p{
+    color:#758096;
+    font-size:18px;
+    line-height:1.6;
+}
+
+/* ================= MARKETS ================= */
+
+.games{
+    background:#f7faff;
+}
+
+.game-grid{
+    max-width:1050px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.game-card{
+    background:white;
+    border:1px solid #e2eaf5;
+    border-left:5px solid #377be4;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 8px 25px rgba(26,62,115,.07);
+    transition:.25s;
+}
+
+.game-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 14px 30px rgba(26,62,115,.12);
+}
+
+.game-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+}
+
+.game-name{
+    font-size:18px;
+    font-weight:800;
+}
+
+.live-dot{
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    color:#3d8a68;
+    font-size:12px;
+    font-weight:700;
+}
+
+.live-dot:before{
+    content:"";
+    width:8px;
+    height:8px;
+    background:#45a678;
+    border-radius:50%;
+    box-shadow:0 0 0 4px #e7f5ed;
+}
+
+.time{
+    margin:10px 0;
+    color:#718096;
+    font-size:14px;
+}
+
+.demo-result{
+    text-align:center;
+    background:#f1f7f7;
+    border:1px dashed #c9ddd9;
+    border-radius:13px;
+    padding:13px;
+    color:#3676d7;
+    font-size:18px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.game-actions{
+    display:flex;
+    gap:10px;
+    margin-top:12px;
+}
+
+.demo-btn{
+    flex:1;
+    border:0;
+    border-radius:30px;
+    padding:10px;
+    background:linear-gradient(90deg,#377ce7,#438cdb);
+    color:white;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.pana-btn{
+    border:1px solid #d5e2e1;
+    background:white;
+    border-radius:30px;
+    padding:10px 18px;
+    color:#3676d7;
+    font-weight:700;
+}
+
+/* ================= RATES ================= */
+
+.rates{
+    background:white;
+}
+
+.rate-box{
+    max-width:1000px;
+    margin:auto;
+    border:10px solid #377be4;
+    border-radius:30px;
+    padding:18px;
+    background:white;
+    box-shadow:0 20px 50px rgba(41,101,190,.12);
+}
+
+.rate-row{
+    min-height:90px;
+    margin:12px 0;
+    padding:20px 30px;
+    border:2px solid #e3ebf8;
+    background:#f6faff;
+    border-radius:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+}
+
+.rate-row strong{
+    font-size:22px;
+}
+
+.rate-value{
+    color:#377be4;
+    font-size:22px;
+    font-weight:900;
+}
+
+/* ================= WINNERS ================= */
+
+.winners{
+    background:#fff;
+    overflow:hidden;
+}
+
+.winner-track{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.winner{
+    background:white;
+    border:1px solid #edf0f4;
+    border-radius:24px;
+    padding:22px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    box-shadow:0 10px 35px rgba(24,53,96,.08);
+}
+
+.avatar{
+    min-width:68px;
+    height:68px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#d76b9d,#e9aac7);
+    border:5px solid #ffe96b;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-weight:900;
+    font-size:19px;
+}
+
+.winner-info{
+    flex:1;
+}
+
+.winner-info h3{
+    font-size:19px;
+    margin-bottom:7px;
+}
+
+.market{
+    color:#68778d;
+    font-size:14px;
+    font-weight:700;
+}
+
+.amount{
+    color:#377be4;
+    font-size:23px;
+    font-weight:900;
+    margin-bottom:7px;
+}
+
+.won{
+    display:inline-block;
+    background:#eaf7f1;
+    color:#3c8a67;
+    padding:6px 13px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:800;
+}
+
+/* ================= APP DOWNLOAD ================= */
+
+.download-section{
+    padding:70px 20px;
+    background:#f5f8ff;
+}
+
+.download-card{
+    max-width:850px;
+    min-height:420px;
+    margin:auto;
+    border-radius:35px;
+    padding:45px 25px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(135deg,#2174e8,#327fe9 60%,#2468d3);
+    color:white;
+    box-shadow:0 25px 55px rgba(31,103,207,.25);
+}
+
+.download-card:before,
+.download-card:after{
+    content:"";
+    position:absolute;
+    width:130%;
+    height:100px;
+    background:#f5f8ff;
+    border-radius:50%;
+    left:-15%;
+}
+
+.download-card:before{
+    top:-80px;
+}
+
+.download-card:after{
+    bottom:-80px;
+}
+
+.download-card h2{
+    position:relative;
+    z-index:2;
+    font-size:30px;
+    line-height:1.3;
+}
+
+.download-card h2 span{
+    color:#ffe74d;
+}
+
+.download-card p{
+    position:relative;
+    z-index:2;
+    max-width:620px;
+    margin:15px auto 20px;
+    line-height:1.6;
+    color:#e9f1ff;
+}
+
+.download-btn{
+    position:relative;
+    z-index:3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    width:min(600px,100%);
+    margin:20px auto;
+    padding:15px 20px;
+    border-radius:40px;
+    background:white;
+    color:#3478dc;
+    text-decoration:none;
+    font-weight:900;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+.phone{
+    position:relative;
+    z-index:2;
+    height:190px;
+    margin-top:5px;
+    max-width:90%;
+    object-fit:contain;
+}
+
+/* ================= STATS ================= */
+
+.stats{
+    background:#07142e;
+    color:white;
+    padding:30px 20px;
+}
+
+.stats-grid{
+    max-width:950px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    text-align:center;
+}
+
+.stat{
+    padding:10px;
+    border-right:1px solid rgba(255,255,255,.12);
+}
+
+.stat:last-child{
+    border-right:0;
+}
+
+.stat strong{
+    display:block;
+    color:white;
+    font-size:22px;
+}
+
+.stat span{
+    color:#7e91b4;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#07142e;
+    color:white;
+    padding:55px 20px 110px;
+}
+
+.footer-grid{
+    max-width:1050px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:45px;
+}
+
+.footer-logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:18px;
+}
+
+.footer h3{
+    margin-bottom:15px;
+}
+
+.footer p,
+.footer a{
+    color:#71819e;
+    line-height:1.8;
+}
+
+.footer a{
+    display:block;
+    text-decoration:none;
+}
+
+.footer a:hover{
+    color:#58a9ff;
+}
+
+.socials{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+}
+
+.social{
+    width:38px;
+    height:38px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#13264a;
+    border-radius:10px;
+    color:white!important;
+}
+
+/* ================= LIVE NOTIFICATION ================= */
+
+.notification{
+    position:fixed;
+    right:18px;
+    bottom:95px;
+    z-index:2000;
+    width:280px;
+    background:white;
+    border-radius:16px;
+    padding:13px;
+    box-shadow:0 12px 35px rgba(0,0,0,.18);
+    border-left:4px solid #377be4;
+    transform:translateX(330px);
+    transition:.5s;
+}
+
+.notification.show{
+    transform:translateX(0);
+}
+
+.notif-top{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:6px;
+}
+
+.notif-live{
+    color:#3d9b6d;
+    font-size:11px;
+    font-weight:800;
+}
+
+.notif-name{
+    font-weight:800;
+}
+
+.notif-text{
+    color:#69768b;
+    font-size:13px;
+    line-height:1.5;
+}
+
+.notif-points{
+    color:#377be4;
+    font-weight:900;
+}
+
+/* ================= FIXED DOWNLOAD ================= */
+
+.fixed-download{
+    position:fixed;
+    left:50%;
+    bottom:18px;
+    transform:translateX(-50%);
+    z-index:2500;
+    width:min(600px,calc(100% - 30px));
+    height:62px;
+    border-radius:50px;
+    background:linear-gradient(90deg,#2875e5,#397fe7);
+    color:white;
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    font-size:19px;
+    font-weight:900;
+    box-shadow:0 10px 35px rgba(27,99,211,.4);
+}
+
+.fixed-download:hover{
+    background:linear-gradient(90deg,#347fe9,#4a8cf0);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:750px){
+
+    .menu{
+        display:none;
+    }
+
+    .nav{
+        min-height:70px;
+    }
+
+    .hero{
+        min-height:650px;
+        padding-top:55px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .hero-image{
+        height:350px;
+    }
+
+    .section-head h2{
+        font-size:31px;
+    }
+
+    .game-grid,
+    .winner-track{
+        grid-template-columns:1fr;
+    }
+
+    .rate-box{
+        border-width:6px;
+        padding:10px;
+    }
+
+    .rate-row{
+        min-height:72px;
+        padding:16px;
+    }
+
+    .rate-row strong,
+    .rate-value{
+        font-size:17px;
+    }
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:15px;
+    }
+
+    .stat{
+        border-right:0;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .notification{
+        right:12px;
+        bottom:92px;
+        width:265px;
+    }
+
+    .fixed-download{
+        height:58px;
+        font-size:16px;
+    }
+}
+
+@media(max-width:420px){
+
+    .logo-text h2{
+        font-size:18px;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .hero-image{
+        height:300px;
+    }
+
+    .game-card{
+        padding:16px;
+    }
+
+    .winner{
+        padding:16px;
+    }
+
+    .amount{
+        font-size:19px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+    <div class="nav">
+
+        <div class="logo">
+            <div class="logo-box">WM</div>
+
+            <div class="logo-text">
+                <h2>WORLI MATKA</h2>
+                <span>ENTERTAINMENT</span>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <a href="#home">Home</a>
+            <a href="#games">Games</a>
+            <a href="#rates">Rates</a>
+            <a href="#winners">Winners</a>
+            <a href="#download">Download</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>
+            Experience The Legacy<br>
+            With <span>Worli Matka</span>
+        </h1>
+
+        <p>
+            Explore our premium market-style entertainment experience,
+            live demo charts, game information and virtual points.
+        </p>
+
+        <a href="#download" class="hero-download">
+            ⬇️ &nbsp; Download Worli Matka App
+        </a>
+
+    </div>
+
+    <div class="hero-image">
+
+        <!-- Replace with your girl poster -->
+        <img src="girl-poster.jpg"
+             alt="Worli Matka promotional poster">
+
+    </div>
+
+</section>
+
+
+<!-- ================= BEST GAMES ================= -->
+
+<section class="games" id="games">
+
+    <div class="section-head">
+        <h2>Best <span>Games</span></h2>
+
+        <p>
+            Explore our premium market-style entertainment catalogue
+            and view demo panel information.
+        </p>
+    </div>
+
+
+    <div class="game-grid" id="gameGrid">
+
+        <!-- Cards generated by JavaScript -->
+
+    </div>
+
+</section>
+
+
+<!-- ================= GAME RATES ================= -->
+
+<section class="rates" id="rates">
+
+    <div class="section-head">
+
+        <h2>Best <span>Game Rates</span></h2>
+
+        <p>
+            Demo rate information for the entertainment experience.
+        </p>
+
+    </div>
+
+
+    <div class="rate-box">
+
+        <div class="rate-row">
+            <strong>Single</strong>
+            <span class="rate-value">10 - 100</span>
+        </div>
+
+        <div class="rate-row">
+            <strong>Jodi</strong>
+            <span class="rate-value">10 - 1000</span>
+        </div>
+
+        <div class="rate-row">
+            <strong>Single Patti</strong>
+            <span class="rate-value">10 - 1600</span>
+        </div>
+
+        <div class="rate-row">
+            <strong>Double Patti</strong>
+            <span class="rate-value">10 - 3200</span>
+        </div>
+
+        <div class="rate-row">
+            <strong>Triple Patti</strong>
+            <span class="rate-value">10 - 10000</span>
+        </div>
+
+        <div class="rate-row">
+            <strong>Half Sangam</strong>
+            <span class="rate-value">10 - 10000</span>
+        </div>
+
+        <div class="rate-row">
+            <strong>Full Sangam</strong>
+            <span class="rate-value">10 - 100000</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TOP WINNERS ================= -->
+
+<section class="winners" id="winners">
+
+    <div class="section-head">
+
+        <h2>🏆 Today's Top <span>Winners</span></h2>
+
+        <p>
+            Live-style demo board showing fictional virtual-point achievements.
+        </p>
+
+    </div>
+
+
+    <div class="winner-track" id="winnerTrack">
+
+        <!-- Winners generated by JavaScript -->
+
+    </div>
+
+</section>
+
+
+<!-- ================= DOWNLOAD ================= -->
+
+<section class="download-section" id="download">
+
+    <div class="download-card">
+
+        <h2>
+            Download <span>Worli Matka</span> App
+            <br>
+            For Android Devices
+        </h2>
+
+        <p>
+            Get access to the Worli Matka entertainment interface,
+            demo markets and virtual-point experience on your phone.
+        </p>
+
+        <!-- Replace # with your legitimate app download URL -->
+        <a href="#" class="download-btn"
+           onclick="demoDownload(event)">
+            🤖 &nbsp; Download Worli Matka App
+        </a>
+
+        <!-- Replace with your app screenshot -->
+        <img src="app-screen.png"
+             class="phone"
+             alt="Worli Matka app screen">
+
+    </div>
+
+</section>
+
+
+<!-- ================= STATS ================= -->
+
+<div class="stats">
+
+    <div class="stats-grid">
+
+        <div class="stat">
+            <strong>10+</strong>
+            <span>YEARS OF DESIGN</span>
+        </div>
+
+        <div class="stat">
+            <strong>50K+</strong>
+            <span>DEMO USERS</span>
+        </div>
+
+        <div class="stat">
+            <strong>19</strong>
+            <span>DEMO MARKETS</span>
+        </div>
+
+        <div class="stat">
+            <strong>24/7</strong>
+            <span>SUPPORT</span>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+
+            <div class="footer-logo">
+
+                <div class="logo-box">WM</div>
+
+                <div>
+                    <h3>WORLI MATKA</h3>
+                    <small style="color:#43bd7a;">
+                        ● Entertainment Platform
+                    </small>
+                </div>
+
+            </div>
+
+            <p>
+                A premium market-style entertainment interface featuring
+                demo results, virtual points and informational game sections.
+            </p>
+
+            <div class="socials">
+                <a href="#" class="social">f</a>
+                <a href="#" class="social">X</a>
+                <a href="#" class="social">W</a>
+                <a href="#" class="social">T</a>
+                <a href="#" class="social">◎</a>
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <h3>NAVIGATION</h3>
+
+            <a href="#home">› Home</a>
+            <a href="#games">› All Games</a>
+            <a href="#rates">› Game Rates</a>
+            <a href="#winners">› Top Winners</a>
+
+        </div>
+
+
+        <div>
+
+            <h3>LEGAL</h3>
+
+            <a href="#">› Terms & Conditions</a>
+            <a href="#">› Privacy Policy</a>
+            <a href="#">› Responsible Use</a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= LIVE NOTIFICATION ================= -->
+
+<div class="notification" id="notification">
+
+    <div class="notif-top">
+
+        <span class="notif-name" id="notifName">
+            Rahul K.
+        </span>
+
+        <span class="notif-live">
+            ● LIVE
+        </span>
+
+    </div>
+
+    <div class="notif-text">
+
+        Achievement in
+        <strong id="notifMarket">KALYAN</strong>
+
+        <br>
+
+        Virtual points:
+        <span class="notif-points"
+              id="notifAmount">
+            12,500
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- ================= PERMANENT BOTTOM BUTTON ================= -->
+
+<a href="#download"
+   class="fixed-download">
+
+    ⬇️
+    <span>Download Worli Matka App</span>
+
+</a>
+
+
+<script>
+
+/* =========================================================
+   DEMO MARKET DATA
+   ========================================================= */
+
+const games = [
+
+    {
+        name:"KALYAN",
+        time:"16:00 PM - 18:00 PM",
+        result:"255 - 20 - 578"
+    },
+
+    {
+        name:"KALYAN MORNING",
+        time:"11:30 AM - 12:30 PM",
+        result:"124 - 79 - 270"
+    },
+
+    {
+        name:"KALYAN NIGHT",
+        time:"21:40 PM - 23:40 PM",
+        result:"267 - 5X XXX"
+    },
+
+    {
+        name:"MADHUR DAY",
+        time:"13:30 PM - 14:30 PM",
+        result:"350 - 87 - 377"
+    },
+
+    {
+        name:"MADHUR MORNING",
+        time:"11:30 AM - 12:30 PM",
+        result:"246 - 22 - 778"
+    },
+
+    {
+        name:"MADHUR NIGHT",
+        time:"20:35 PM - 22:35 PM",
+        result:"239 - 40 - 460"
+    },
+
+    {
+        name:"MAIN BAZAR",
+        time:"21:50 PM - 23:59 PM",
+        result:"479 - 0X XXX"
+    },
+
+    {
+        name:"MILAN DAY",
+        time:"15:00 PM - 17:00 PM",
+        result:"360 - 96 - 240"
+    },
+
+    {
+        name:"MILAN MORNING",
+        time:"10:30 AM - 11:30 AM",
+        result:"130 - 40 - 190"
+    },
+
+    {
+        name:"MILAN NIGHT",
+        time:"21:05 PM - 23:05 PM",
+        result:"168 - 5X XXX"
+    },
+
+    {
+        name:"RAJDHANI DAY",
+        time:"15:10 PM - 17:10 PM",
+        result:"356 - 46 - 880"
+    },
+
+    {
+        name:"RAJDHANI NIGHT",
+        time:"21:40 PM - 23:40 PM",
+        result:"278 - 7X XXX"
+    },
+
+    {
+        name:"RATAN MORNING",
+        time:"11:00 AM - 12:00 PM",
+        result:"218 - 32 - 640"
+    },
+
+    {
+        name:"RATAN NIGHT",
+        time:"21:30 PM - 23:30 PM",
+        result:"286 - 4X XXX"
+    }
+
+];
+
+
+/* =========================================================
+   CREATE GAME CARDS
+   ========================================================= */
+
+const gameGrid = document.getElementById("gameGrid");
+
+games.forEach(game => {
+
+    const card = document.createElement("div");
+
+    card.className = "game-card";
+
+    card.innerHTML = `
+
+        <div class="game-top">
+
+            <div class="game-name">
+                ${game.name}
+            </div>
+
+            <div class="live-dot">
+                LIVE
+            </div>
+
+        </div>
+
+        <div class="time">
+            ◷ ${game.time}
+        </div>
+
+        <div class="demo-result">
+            ${game.result}
+        </div>
+
+        <div class="game-actions">
+
+            <button class="demo-btn"
+                    onclick="showDemoMessage('${game.name}')">
+                ☁ Play
+            </button>
+
+            <button class="pana-btn"
+                    onclick="showDemoMessage('${game.name}')">
+                Panel ☷
+            </button>
+
+        </div>
+    `;
+
+    gameGrid.appendChild(card);
+
+});
+
+
+/* =========================================================
+   WINNER DATA
+   ========================================================= */
+
+const winners = [
+
+    {
+        name:"Neha S.",
+        initials:"NS",
+        market:"MAIN BAZAR",
+        points:"56,082"
+    },
+
+    {
+        name:"Aisha S.",
+        initials:"AS",
+        market:"MADHUR NIGHT",
+        points:"65,818"
+    },
+
+    {
+        name:"Priya C.",
+        initials:"PC",
+        market:"RATAN NIGHT",
+        points:"42,750"
+    },
+
+    {
+        name:"Karan M.",
+        initials:"KM",
+        market:"KALYAN MORNING",
+        points:"38,420"
+    },
+
+    {
+        name:"Rohit J.",
+        initials:"RJ",
+        market:"MILAN DAY",
+        points:"31,680"
+    },
+
+    {
+        name:"Simran P.",
+        initials:"SP",
+        market:"RAJDHANI DAY",
+        points:"27,940"
+    }
+
+];
+
+
+const winnerTrack =
+    document.getElementById("winnerTrack");
+
+
+function renderWinners(){
+
+    winnerTrack.innerHTML = "";
+
+    winners.forEach(w => {
+
+        const div = document.createElement("div");
+
+        div.className = "winner";
+
+        div.innerHTML = `
+
+            <div class="avatar">
+                ${w.initials}
+            </div>
+
+            <div class="winner-info">
+
+                <h3>${w.name}</h3>
+
+                <div class="market">
+                    ✓ &nbsp; ${w.market}
+                </div>
+
+            </div>
+
+            <div>
+
+                <div class="amount">
+                    ${w.points}
+                </div>
+
+                <span class="won">
+                    WON
+                </span>
+
+            </div>
+
+        `;
+
+        winnerTrack.appendChild(div);
+
+    });
+
+}
+
+renderWinners();
+
+
+/* =========================================================
+   ROTATING LIVE NOTIFICATIONS
+   ========================================================= */
+
+const notification =
+    document.getElementById("notification");
+
+const notifName =
+    document.getElementById("notifName");
+
+const notifMarket =
+    document.getElementById("notifMarket");
+
+const notifAmount =
+    document.getElementById("notifAmount");
+
+
+let notificationIndex = 0;
+
+
+function showNotification(){
+
+    const winner =
+        winners[notificationIndex];
+
+    notifName.textContent =
+        winner.name;
+
+    notifMarket.textContent =
+        winner.market;
+
+    notifAmount.textContent =
+        winner.points;
+
+    notification.classList.add("show");
+
+    setTimeout(() => {
+
+        notification.classList.remove("show");
+
+    },4500);
+
+    notificationIndex++;
+
+    if(notificationIndex >= winners.length){
+        notificationIndex = 0;
+    }
+
+}
+
+
+/* Start notification */
+
+setTimeout(showNotification,1800);
+
+
+/* Repeat every 7 seconds */
+
+setInterval(showNotification,7000);
+
+
+/* =========================================================
+   DEMO BUTTON
+   ========================================================= */
+
+function showDemoMessage(market){
+
+    alert(
+        market +
+        " demo screen — this is an entertainment/preview interface."
+    );
+
+}
+
+
+/* =========================================================
+   DOWNLOAD BUTTON
+   ========================================================= */
+
+function demoDownload(event){
+
+    event.preventDefault();
+
+    alert(
+        "Worli Matka demo download button clicked."
+    );
+
+}
+
+
+/* =========================================================
+   UPDATE DEMO WINNER POINTS
+   ========================================================= */
+
+setInterval(() => {
+
+    winners.forEach(w => {
+
+        const current =
+            parseInt(
+                w.points.replace(/,/g,"")
+            );
+
+        const change =
+            Math.floor(Math.random()*900) + 100;
+
+        w.points =
+            (current + change)
+            .toLocaleString("en-IN");
+
+    });
+
+    renderWinners();
+
+},12000);
+
+
+/* =========================================================
+   ACTIVE DOWNLOAD BUTTON SCROLL EFFECT
+   ========================================================= */
+
+window.addEventListener("scroll",() => {
+
+    const button =
+        document.querySelector(".fixed-download");
+
+    if(window.scrollY > 200){
+
+        button.style.boxShadow =
+            "0 12px 40px rgba(27,99,211,.55)";
+
+    }else{
+
+        button.style.boxShadow =
+            "0 10px 35px rgba(27,99,211,.4)";
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
