@@ -150,12 +150,14 @@ header{
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:12px;
 
     width:min(600px,90%);
-    margin:30px auto 0;   /* text ke niche */
+    margin:-35px auto 0;   /* poster ke niche overlap effect */
 
-    background:#367be5;
+    position:relative;
+    z-index:20;
+
+    background:linear-gradient(90deg,#2875e5,#397fe7);
     color:#fff;
 
     padding:18px 25px;
@@ -165,7 +167,7 @@ header{
     font-size:20px;
     font-weight:800;
 
-    box-shadow:0 10px 30px rgba(0,0,0,.25);
+    box-shadow:0 10px 35px rgba(27,99,211,.4);
 }
 
 .hero-download:hover{
@@ -176,14 +178,14 @@ header{
 /* GIRL POSTER */
 
 .hero-image{
-    margin:40px auto 0;
+    margin:30px auto 0;
     display:flex;
     justify-content:center;
 }
 
 .hero-image img{
     width:100%;
-    max-width:420px;
+    max-width:650px;
     height:auto;
     display:block;
 }
@@ -835,32 +837,19 @@ footer{
 <section class="hero" id="home">
 
 <div class="hero-content">
-
-    <h1>
-       Trust The Legacy,  Play With Pride On
-        <span>Worli Matka</span>
-    </h1>
+    <h1>Trust The Legacy...</h1>
 
     <p>
-        India's Most Trusted Online Matka Application.
-        Enjoy High Winning Rates, Live Charts and Fast Withdrawals.
+        India's Most Trusted Online Matka Application...
     </p>
-
 </div>
 
 <div class="hero-image">
-
-    <img src="girl-poster.jpg"
-         alt="Girl Poster">
-
+    <img src="girl-poster.jpg" alt="">
 </div>
 
-<a href="./worli-matka.apk"
-   class="hero-download"
-   download="worlimtk.apk">
-
-   ⬇️ Download Worli Matka App
-
+<a href="./worli-matka.apk" class="hero-download">
+    ⬇️ Download Worli Matka App
 </a>
 
 
