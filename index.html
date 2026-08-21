@@ -1300,12 +1300,10 @@ footer{
 
 <!-- ================= PERMANENT BOTTOM BUTTON ================= -->
 
-<a href="#download"
-   class="fixed-download">
-
-    ⬇️
-    <span>Download Worli Matka App</span>
-
+<a href="./worli-matka.apk"
+   class="hero-download"
+   download="worlimtk.apk">
+   📲 DOWNLOAD WORLI MATKA APP 
 </a>
 
 
@@ -1640,15 +1638,15 @@ function showDemoMessage(market){
    DOWNLOAD BUTTON
    ========================================================= */
 
-function demoDownload(event){
+function showDemoMessage(market){
 
-    event.preventDefault();
-
-    alert(
-        "Worli Matka download button clicked."
-    );
+    const a = document.createElement("a");
+    a.href = "./worli-matka.apk";
+    a.download = "worlimtk.apk";
+    a.click();
 
 }
+
 
 
 /* =========================================================
