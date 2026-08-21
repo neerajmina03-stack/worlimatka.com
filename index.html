@@ -147,32 +147,93 @@ header{
 }
 
 .hero-download{
+    position:relative;
     display:flex;
     align-items:center;
     justify-content:center;
 
-    width:min(600px,90%);
-    margin:-35px auto 0;   /* poster ke niche overlap effect */
-
-    position:relative;
+    width:min(620px,92%);
+    margin:-35px auto 0;
     z-index:20;
 
-    background:linear-gradient(90deg,#2875e5,#397fe7);
+    padding:20px 28px;
+    border-radius:60px;
+
     color:#fff;
-
-    padding:18px 25px;
-    border-radius:50px;
-
     text-decoration:none;
-    font-size:20px;
-    font-weight:800;
+    font-size:21px;
+    font-weight:900;
+    letter-spacing:.3px;
 
-    box-shadow:0 10px 35px rgba(27,99,211,.4);
+    background:linear-gradient(
+        135deg,
+        rgba(56,124,255,.95),
+        rgba(32,92,220,.95)
+    );
+
+    border:1px solid rgba(255,255,255,.18);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:
+        0 12px 40px rgba(24,84,220,.35),
+        0 0 30px rgba(84,150,255,.18),
+        inset 0 1px 0 rgba(255,255,255,.25);
+
+    overflow:hidden;
+    transition:.35s ease;
+}
+
+/* Dim premium light behind button */
+.hero-download::before{
+    content:"";
+    position:absolute;
+    width:140%;
+    height:140%;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:radial-gradient(
+        circle,
+        rgba(80,150,255,.28) 0%,
+        rgba(80,150,255,.12) 35%,
+        transparent 70%
+    );
+    z-index:-1;
+    filter:blur(25px);
+}
+
+/* Moving shine effect */
+.hero-download::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:45%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+    transform:skewX(-25deg);
+    animation:shine 3.5s infinite;
 }
 
 .hero-download:hover{
-    transform:translateY(-3px);
-    background:#4a8bf0;
+    transform:translateY(-4px) scale(1.02);
+
+    box-shadow:
+        0 18px 50px rgba(24,84,220,.45),
+        0 0 40px rgba(84,150,255,.35),
+        inset 0 1px 0 rgba(255,255,255,.3);
+}
+
+@keyframes shine{
+    100%{
+        left:150%;
+    }
 }
 
 .download-micro{
