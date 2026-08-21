@@ -175,19 +175,25 @@ header{
     background:#4a8bf0;
 }
 
-/* GIRL POSTER */
-
-.hero-image{
-    margin:30px auto 0;
-    display:flex;
-    justify-content:center;
+.download-micro{
+    margin-top:12px;
+    text-align:center;
+    color:#eaf3ff;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:.5px;
+    text-shadow:0 0 10px rgba(255,255,255,.25);
+    animation:glowText 2s ease-in-out infinite;
 }
 
-.hero-image img{
-    width:100%;
-    max-width:650px;
-    height:auto;
-    display:block;
+@keyframes glowText{
+    0%,100%{
+        opacity:.8;
+    }
+    50%{
+        opacity:1;
+        text-shadow:0 0 18px rgba(255,255,255,.6);
+    }
 }
 /* ================= SECTIONS ================= */
 
@@ -843,13 +849,17 @@ footer{
         India's most trusted online matka application. Enjoy high winning rates, 
         live charts, and 4-minute instant withdrawals.
     </p>
-</div>
+<div>
+    <a href="./worli-matka.apk"
+       class="download-btn"
+       download="worlimtk.apk">
+       📲 &nbsp; Download Worli Matka App
+    </a>
 
-<a href="./worli-matka.apk"
-   class="download-btn"
-   download="worlimtk.apk">
-   📲 &nbsp; Download Worli Matka App
-</a>
+    <div class="download-micro">
+        ⚡ Instant Withdrawal • 24×7 Available
+    </div>
+
 
 
 </section>
